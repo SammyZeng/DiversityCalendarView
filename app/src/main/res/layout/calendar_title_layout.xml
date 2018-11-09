@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@color/calendar_background"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/calendar_back_control_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="＜"
+        android:textColor="@color/calendar_back_control_color"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"/>
+
+
+
+    <TextView
+        android:id="@+id/calendar_year_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2018" />
+
+    <TextView
+        android:id="@+id/calendar_year_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="年"
+        android:padding="1dp"/>
+
+    <TextView
+        android:id="@+id/calendar_month_text_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7" />
+
+    <TextView
+        android:id="@+id/calendar_month_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="日"
+        android:padding="1dp"/>
+
+
+
+    <TextView
+        android:id="@+id/calendar_next_control_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="＞"
+        android:textColor="@color/calendar_back_control_color"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"/>
+
+</LinearLayout>

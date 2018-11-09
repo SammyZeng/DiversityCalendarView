@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/calendar_background"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/week_title_one"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="日"/>
+
+    <TextView
+        android:id="@+id/week_title_two"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="一"/>
+
+    <TextView
+        android:id="@+id/week_title_three"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="二"/>
+
+    <TextView
+        android:id="@+id/week_title_four"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="三"/>
+
+    <TextView
+        android:id="@+id/week_title_five"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="四"/>
+
+    <TextView
+        android:id="@+id/week_title_six"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="五"/>
+
+    <TextView
+        android:id="@+id/week_title_seven"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="六"/>
+
+</LinearLayout>

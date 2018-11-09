@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="calendar_background">#e8eaeb</color>
+    <color name="calendar_week_title_text_white_gray">#99ffffff</color>
+    <color name="list_pms_tag_color">#222222</color>
+    <color name="calendar_back_control_color">#DE3D96</color>
+    <color name="day_text_color">#525151</color>
+</resources>
