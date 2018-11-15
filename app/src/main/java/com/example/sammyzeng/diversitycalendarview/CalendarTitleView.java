@@ -25,6 +25,7 @@ public class CalendarTitleView implements View.OnClickListener {
         this.context = context;
         this.viewGroup = viewGroup;
         this.iCalendarTitleButtonListener = iCalendarTitleButtonListener;
+        init();
     }
 
     private void init(){

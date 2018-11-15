@@ -8,6 +8,7 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -58,7 +59,7 @@ public class CalendarDayView extends View {
         int solidColor = typedArray.getColor(R.styleable.CalendarDayView_solidColor, getResources().getColor(R.color.calendar_background));
         int strokeColor = typedArray.getColor(R.styleable.CalendarDayView_strokeColor, getResources().getColor(R.color.calendar_background));
         float strokeWidth = typedArray.getDimension(R.styleable.CalendarDayView_strokeWidth, 0);
-        calendarDayProperty.setDayText(dayText);
+        if(!StringUtil.isEmpty(dayText)) calendarDayProperty.setDayText(dayText);
         calendarDayProperty.setTextSize(textSize);
         calendarDayProperty.setTextColor(textColor);
         calendarDayProperty.setTextScale(textScale);
@@ -66,7 +67,7 @@ public class CalendarDayView extends View {
         calendarDayProperty.setSolidColor(solidColor);
         calendarDayProperty.setStrokeColor(strokeColor);
         calendarDayProperty.setStrokeWidth(strokeWidth);
-        calendarDayProperty.setSpecialText(specialText);
+        if(!StringUtil.isEmpty(specialText)) calendarDayProperty.setDayText(specialText);
         calendarDayProperty.setSpecialTextSize(specialTextSize);
         calendarDayProperty.setSpecialTextColor(specialTextColor);
         calendarDayProperty.setSpecialTextTypeface(Typeface.DEFAULT);
@@ -76,6 +77,10 @@ public class CalendarDayView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+        setMeasuredDimension(width, height);
+        Log.i("test", "widthMeasureSpec:" + width + " " + "heightMeasureSpec:" + height);
 
     }
 
@@ -102,7 +107,7 @@ public class CalendarDayView extends View {
 
         //绘画字体,如果存在特殊文本，需要先测量其高度，目的是让号数和特殊文本整体居中
         float interalHeight = 0;
-        if(!calendarDayProperty.getSpecialText().isEmpty()){
+        if(!StringUtil.isEmpty(calendarDayProperty.getSpecialText())){
             paint.setAntiAlias(true);
             paint.setColor(calendarDayProperty.getSpecialTextColor());
             paint.setTextSize(calendarDayProperty.getSpecialTextSize() * calendarDayProperty.getTextScale());
@@ -120,7 +125,7 @@ public class CalendarDayView extends View {
         paint.setTypeface(calendarDayProperty.getTextTypeface());
         Rect bounds  = new Rect();
         paint.getTextBounds(calendarDayProperty.getDayText(), 0, calendarDayProperty.getDayText().length(), bounds);
-        canvas.drawText(calendarDayProperty.getSpecialText(), width/2 - bounds.width()/2, height/2 + bounds.height()/2 - interalHeight, paint);
+        canvas.drawText(calendarDayProperty.getDayText(), width/2 - bounds.width()/2, height/2 + bounds.height()/2 - interalHeight, paint);
         paint.reset();
     }
 }

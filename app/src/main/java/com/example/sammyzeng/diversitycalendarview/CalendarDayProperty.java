@@ -45,6 +45,8 @@ public class CalendarDayProperty {
         textScale = 1.0f;
         solidColor = context.getResources().getColor(R.color.calendar_background);
         strokeColor = context.getResources().getColor(R.color.calendar_background);
+        dayText = "1";
+        specialText = "今天";
     }
 
     public String getDayText() {

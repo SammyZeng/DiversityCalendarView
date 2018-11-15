@@ -25,6 +25,7 @@ public class CalendarWeekTitleView {
     public CalendarWeekTitleView(Context context, ViewGroup viewGroup) {
         this.context = context;
         this.viewGroup = viewGroup;
+        initView();
     }
 
     private void initView(){
@@ -36,6 +37,10 @@ public class CalendarWeekTitleView {
         fiveTv = (TextView)calendarWeekTitleView.findViewById(R.id.week_title_five);
         sixTv = (TextView)calendarWeekTitleView.findViewById(R.id.week_title_six);
         sevenTv = (TextView)calendarWeekTitleView.findViewById(R.id.week_title_seven);
+    }
+
+    public View getView(){
+        return calendarWeekTitleView;
     }
 
     private void setData(){
